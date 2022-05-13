@@ -1,0 +1,47 @@
+
+import random
+
+
+
+top = input ("Give a number: ")
+
+if top.isdigit():
+    top = int(top)
+    if top <= 0 :
+        print ("Enter a number greater than zero")
+        quit()
+else:
+    print ("Please type a no. next time.")
+    quit()
+    
+random_num = random.randint(0,top)
+
+guess = 0
+
+while True:
+    guess += 1
+
+    guess_no = input ("Make a guess: ")
+    if guess_no.isdigit():
+        guess_no = int(guess_no)
+    else:
+        print ("Please type a no. next time.")
+        quit()
+        
+    if guess_no == random_num:
+        print ("Right Guess!")
+        break;
+    elif guess_no > random_num:
+        print ("You were above the number.")
+    else:
+        print ("You were below the number.")
+
+
+print ("you got it right in " +str(guess)+ " guesses")
+quit()
+    
+        
+    
+    
+        
+    
