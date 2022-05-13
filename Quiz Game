@@ -1,0 +1,37 @@
+
+import os
+
+print ("Welcome")
+
+text = input ("Do you want to play? ")
+
+if text.lower() != "yes":
+    quit()
+print("Okay, Lets Play ")
+score = 0
+
+ans = input (" What is CPU ? "  )
+if ans.lower() == "central processing unit" :
+    print ("Your ans is correct")
+    score += 1
+else :
+    print ("Wrong answer")
+
+ans = input (" What is ALU ? "  )   
+if ans.lower() == "arithmetic logic unit" :
+    print ("Your ans is correct")
+    score += 1
+else :
+    print ("Wrong answer")
+
+ans = input ("What is PSU ? ")
+if ans.lower() == "power supply" :
+    print ("Your answer is correct ")
+    score += 1
+else:
+    print("Your ans is wrong")
+
+print ("You got " + str(score) + " questions right!")
+print ("Your score is " + str((score/3)*100 ) + " %")
+
+os._exit(0)
