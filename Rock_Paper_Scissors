@@ -1,0 +1,39 @@
+
+import os
+import random
+
+user_guess = 0
+comp_guess = 0
+
+options = ['rock', 'paper', 'scissors']
+while True:
+    user_in = input ("Rock/Paper/Scissors or Q for quit:  ").lower()
+
+    if user_in == 'q':
+        break
+
+    if user_in not in options:
+        continue
+
+    c_input = random.randint(0,2)
+
+    comp_in = options[c_input]
+    print ("Computer picked :", comp_in)
+
+    if (user_in == 'rock' and comp_in =='scissors') or (user_in == 'paper' and comp_in == 'rock') or (user_in == 'scissors' and comp_in == 'paper'):
+        print ("You won!")
+        user_guess += 1
+    elif user_in == comp_in:
+        print('Draw!')
+    else:
+        print('You lose')
+        comp_guess += 1
+
+print("Computer won", comp_guess, "times")
+print("You won ", user_guess, "times")
+
+
+print("Good bye..")
+os._exit(0)
+
+
